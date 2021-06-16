@@ -28,7 +28,7 @@
             "options": {"maxAge": "7d"}
           },
           "/dictionaries": {
-            "path": "../SpellChecker/dictionaries",
+            "path": "../dictionaries",
             "options": {"maxAge": "7d"}
           },
           "/welcome": {
