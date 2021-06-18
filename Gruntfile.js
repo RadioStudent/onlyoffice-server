@@ -90,7 +90,6 @@ module.exports = function (grunt) {
   
   grunt.initConfig({
     clean: packageFile.grunt.clean,
-    mkdir: packageFile.grunt.mkdir,
     copy: packageFile.grunt.copy,
     comments: {
       js: {
@@ -130,11 +129,10 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-stripcomments');
   grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-check-dependencies');
   
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'comments', 'usebanner', 'checkDependencies']);
+  grunt.registerTask('default', ['clean', 'copy', 'comments', 'usebanner', 'checkDependencies']);
   grunt.registerTask('develop', ['build-develop', 'copy']);
 };
